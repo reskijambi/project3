@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biodata M. Reski Ramadan</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #19345c;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #18283d;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4d9cff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 400px;
+            background: linear-gradient(
+                rgba(15, 35, 58, 0.82),
+                rgba(15, 35, 58, 0.82)
+            ),
+            url("foto.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            padding: 50px 7%;
+            color: white;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 8px;
+        }
+
+        .hero h3 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .motto {
+            font-style: italic;
+            font-size: 17px;
+        }
+
+        /* GENERAL */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* TENTANG */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        blockquote {
+            margin-top: 20px;
+            padding: 15px 20px;
+            border-left: 5px solid #3478db;
+            background-color: #eef5ff;
+            font-style: italic;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        caption {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #d4dfec;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eaf2fc;
+        }
+
+        /* HOBI DAN KEAHLIAN */
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* LINK */
+        a {
+            color: #1769d1;
+        }
+
+        .links a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* GALERI */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery figure {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        figcaption {
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        /* KONTAK */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd8e6;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2879df;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #155bb1;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #18283d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .about-container,
+            .three-column,
+            .contact-container,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <h2>Reski Ramadan</h2>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#hobi">Hobi</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="beranda">
+
+        <div class="hero-content">
+
+            <!-- IMAGE -->
+            <img
+                src="gambar biodata/reskiganteng.jpeg"
+                alt="Foto M. Reski Ramadan"
+                title="Foto M. Reski Ramadan"
+                class="profile-photo"
+            >
+
+            <div>
+                <h1>M. Reski Ramadan</h1>
+
+                <h3>
+                    Mahasiswa Sistem Informasi | UIN STS Jambi
+                </h3>
+
+                <p class="motto">
+                    "Bukan tentang siapa yang paling cepat,
+                    tapi siapa yang tetap jalan sampai tujuan."
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+
+        <!-- ================= TENTANG ================= -->
+        <section id="tentang">
+
+            <div class="about-container">
+
+                <article class="card">
+
+                    <h2>Tentang Saya</h2>
+
+                    <p>
+                        Halo! Saya <strong>M. Reski Ramadan</strong>,
+                        seorang mahasiswa <b>Sistem Informasi</b>
+                        di UIN STS Jambi.
+                    </p>
+
+                    <p>
+                        Saya berasal dari Jambi dan saat ini tinggal
+                        di <strong>Aurduri 1</strong>.
+                    </p>
+
+                    <p>
+                        Saya suka mempelajari hal-hal baru, terutama
+                        di bidang <em>teknologi, pemrograman, dan game</em>.
+                    </p>
+
+                    <p>
+                        Selain itu, saya juga senang menamatkan game
+                        dengan cepat atau biasa disebut
+                        <mark>speedrun</mark>.
+                    </p>
+
+                    <blockquote>
+                        "Hidup bukan soal siapa yang paling cepat,
+                        tapi siapa yang tetap jalan sampai tujuan."
+                        <br><br>
+                        — M. Reski Ramadan
+                    </blockquote>
+
+                </article>
+
+
+                <!-- DATA PRIBADI -->
+                <article class="card">
+
+                    <h2>Data Pribadi</h2>
+
+                    <table>
+
+                        <tbody>
+
+                            <tr>
+                                <th>Nama</th>
+                                <td>M. Reski Ramadan</td>
+                            </tr>
+
+                            <tr>
+                                <th>Tanggal Lahir</th>
+                                <td>7 Oktober 2007</td>
+                            </tr>
+
+                            <tr>
+                                <th>Asal</th>
+                                <td>Jambi</td>
+                            </tr>
+
+                            <tr>
+                                <th>Tempat Tinggal</th>
+                                <td>Aurduri 1</td>
+                            </tr>
+
+                            <tr>
+                                <th>Program Studi</th>
+                                <td>Sistem Informasi</td>
+                            </tr>
+
+                            <tr>
+                                <th>Fakultas</th>
+                                <td>Sains dan Teknologi</td>
+                            </tr>
+
+                            <tr>
+                                <th>Kampus</th>
+                                <td>UIN STS Jambi</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PENDIDIKAN ================= -->
+        <section id="pendidikan" class="card">
+
+            <h2>Pendidikan</h2>
+
+            <table>
+
+                <caption>Riwayat Pendidikan</caption>
+
+                <thead>
+                    <tr>
+                        <th>Jenjang</th>
+                        <th>Nama Institusi</th>
+                        <th>Program Studi</th>
+                        <th>Tahun</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>S1</td>
+                        <td>UIN STS Jambi</td>
+                        <td>Sistem Informasi</td>
+                        <td>2025 - Sekarang</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= HOBI / KEAHLIAN / LINK ================= -->
+        <section id="hobi">
+
+            <div class="three-column">
+
+                <!-- HOBI -->
+                <article class="card">
+
+                    <h2>Hobi & Minat</h2>
+
+                    <ul>
+                        <li>Speedrun / menamatkan game dengan cepat</li>
+                        <li>Gaming PC & Mobile</li>
+                        <li>Anime & Manga</li>
+                        <li>Mendengarkan musik</li>
+                        <li>Hiking</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- KEAHLIAN -->
+                <article class="card">
+
+                    <h2>Keahlian</h2>
+
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>Python</li>
+                        <li>Dasar-dasar MySQL</li>
+                        <li>Problem Solving</li>
+                        <li>Web Development</li>
+                        <li>Belajar hal baru</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- LINK -->
+                <article class="card links">
+
+                    <h2>Tautan</h2>
+
+                    <a href="https://github.com" target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="https://linkedin.com" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://youtube.com" target="_blank">
+                        YouTube
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALERI ================= -->
+        <section id="galeri">
+
+            <h2>Galeri</h2>
+
+            <div class="gallery">
+
+                <figure>
+
+                    <img
+                        src="gambar biodata/kegiatan1.jpeg"
+                        alt="Foto profil Reski"
+                        title="Foto Profil"
+                    >
+
+                    <figcaption>
+                        Foto Profil
+                    </figcaption>
+
+                </figure>
+
+
+                <figure>
+
+                    <img
+                        src="gambar biodata/kegiatan2.jpeg"
+                        alt="Foto Reski"
+                        title="Foto Reski"
+                    >
+
+                    <figcaption>
+                        Aktivitas
+                    </figcaption>
+
+                </figure>
+
+
+                <figure>
+
+                    <img
+                        src="gambar biodata/kegiatan5.jpeg"
+                        alt="Foto pribadi Reski"
+                        title="Foto Pribadi"
+                    >
+
+                    <figcaption>
+                        Foto Pribadi
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KONTAK ================= -->
+        <section id="kontak">
+
+            <div class="contact-container">
+
+                <!-- INFORMASI KONTAK -->
+                <article class="card">
+
+                    <h2>Kontak Saya</h2>
+
+                    <p>
+                        Jika ada yang ingin ditanyakan atau sekadar
+                        berkenalan, jangan ragu untuk menghubungi saya.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        📧 Email:
+                        <a href="mailto:reski.ramadan07@gmail.com">
+                            reski.ramadan07@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        📍 Lokasi: Aurduri 1, Jambi
+                    </p>
+
+                </article>
+
+
+                <!-- FORM -->
+                <form action="#" method="post">
+
+                    <h2>Kirim Pesan</h2>
+
+                    <label for="nama">
+                        Nama Anda
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama Anda"
+                        required
+                    >
+
+
+                    <label for="email">
+                        Email Anda
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Masukkan email Anda"
+                        required
+                    >
+
+
+                    <label for="pesan">
+                        Pesan
+                    </label>
+
+                    <textarea
+                        id="pesan"
+                        name="pesan"
+                        placeholder="Tulis pesan Anda..."
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Kirim Pesan
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 M. Reski Ramadan.
+            Semua hak dilindungi.
+        </p>
+
+    </footer>
+
+</body>
+</html>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
